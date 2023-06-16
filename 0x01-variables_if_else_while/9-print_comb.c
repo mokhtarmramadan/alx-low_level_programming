@@ -8,21 +8,21 @@
 int main(void)
 {
 	int n = 48;
-	
+
 	do {
+		putchar(n);
 		if (n == 57)
 		{
-			putchar(n);
-			n++;
+			putchar(32);
+			break;
 		}
 		else
 		{
-		putchar(n);
 		putchar(44);
 		putchar(32);
 		n++;
 		}
-	} while(n < 58);
+	} while (n < 58);
 
 	return (0);
 }
