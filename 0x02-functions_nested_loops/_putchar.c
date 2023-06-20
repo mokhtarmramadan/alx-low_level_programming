@@ -8,7 +8,8 @@
  * Or -1 on error
  */
 
-int _putchar(char *x)
+int _putchar(char x)
 {
-	return write(1, x, 11);
+
+	return write(1, &x, 1);
 }
