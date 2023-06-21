@@ -8,14 +8,15 @@
 int main(void)
 {
 	int i;
+	int sum = 0;
 
 	for (i = 1023; i >= 0; i--)
 	{
-		if (i % 2 == 0 || i % 3 == 0)
+		if (i % 3 == 0 || i % 5 == 0)
 		{
-			printf("%d", i);
+			sum += i;
 		}
 	}
-	printf("\n");
+	printf("%d\n", sum);
 	return (0);
 }
