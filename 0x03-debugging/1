@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include "main.h"
+
+int main(void)
+{
+	int i = 0;
+	int answer = positive_or_negative(i);
+	
+	if (answer == 0)
+	{
+		printf("0 is zero\n");
+	}
+	else
+	{
+		printf("0 is not zero\n");
+	}
+	return (0);
+}
+
+
