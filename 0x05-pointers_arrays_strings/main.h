@@ -1,5 +1,3 @@
-#ifndef HEADER_FILE
-#define HEADER_FILE
 
 int _putchar(char x);
 void reset_to_98(int *n);
@@ -13,4 +11,3 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
 
-#endif

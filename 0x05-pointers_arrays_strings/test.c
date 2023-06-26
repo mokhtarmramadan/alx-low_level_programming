@@ -1,21 +1,20 @@
 #include <stdio.h>
+#include "main.h"
 
-void modif_my_param(int m)
+void print(char *s)
 {
-   m = 402;
+
+	while (*s != '\0')
+	{
+		_putchar(*s);
+		s++;
+	}
+	_putchar(10);
 }
 
-/**
- * main - parameters are passed by value
- *
- * Return: Always 0.
- */
 int main(void)
 {
-   int n;
-
-   n = 98;
-   modif_my_param(n);
-   printf("%d\n", n);
-   return (0);
+	char *s = "Hello world";
+	print(s);
+	return (0);
 }
