@@ -26,7 +26,6 @@ char *leet(char *x)
 			}
 
 			x[i] = values[(int) x[i] - 97];
-			
 		}
 
 		i++;
