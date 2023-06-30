@@ -21,11 +21,12 @@ char *leet(char *x)
 			if (x[i] == 65 || x[i] == 69 || x[i] == 76 || x[i] == 79 || x[i] == 84)
 			{
 				x[i] = values[(int) x[i] - 65];
+				i++;
+				break;
 			}
-			else
-			{
-				x[i] = values[(int) x[i] - 97];
-			}
+
+			x[i] = values[(int) x[i] - 97];
+			
 		}
 
 		i++;
