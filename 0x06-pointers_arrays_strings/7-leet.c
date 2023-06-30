@@ -8,33 +8,24 @@
 char *leet(char *x)
 {
 	int i;
+	int values[20] = {52, 0, 0, 0, 51, 0, 0, 0, 0, 0, 0, 49, 0, 0, 48,
+		0, 0, 0, 0, 55};
 
 	i = 0;
 	while (x[i] != '\0')
 	{
-		if (x[i] == 'a' || x[i] == 'A')
+		while (x[i] == 65 || x[i] == 69 || x[i] == 76 || x[i] == 79 || x[i] == 84
+				||  x[i] == 97 || x[i] == 101 || x[i] == 111 || x[i] == 108 ||
+				 x[i] == 116)
 		{
-			x[i] = 52;
-		}
-		else if (x[i] == 'e' || x[i] == 'E')
-		{
-			x[i] = 51;
-		}
-		else if (x[i] == 'o' || x[i] == 'O')
-		{
-			x[i] = 48;
-		}
-		else if (x[i] == 't' || x[i] == 'T')
-		{
-			x[i] = 55;
-		}
-		else if (x[i] == 'l' || x[i] == 'L')
-		{
-			x[i] = 49;
-		}
-		else
-		{
-			x[i] = x[i];
+			if (x[i] == 65 || x[i] == 69 || x[i] == 76 || x[i] == 79 || x[i] == 84)
+			{
+				x[i] = values[(int) x[i] - 65];
+			}
+			else
+			{
+				x[i] = values[(int) x[i] - 97];
+			}
 		}
 
 		i++;
