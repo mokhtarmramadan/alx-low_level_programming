@@ -4,7 +4,9 @@
 int main()
 {
 	char *x = "Hello";
+	char *temp;
 
-	printf("%c\n", x[0]);
+	temp = x;
+	printf("%s\n", temp);
 	return (0);
 }
