@@ -9,32 +9,14 @@
  */
 int is_palindrome(char *s)
 {
-	int len;
-
-	if (*s == '\0' || *(s + 1) == '\0')
-	{
-		return (1);
-	}
-	len = strlen(s);
-
-	if (*s != s[len - 1])
-	{
-		return (0);
-	}
-	else
-	{
-		char *new_s;
-		int i;
-
-		new_s = malloc(len - 2);
-		for (i = 1; i < len - 1; i++)
-		{
-			new_s[i - 1] = s[i];
-		}
-
-		new_s[i - 1] = '\0';
-
-		return (is_palindrome(new_s));
-	}
+	static int i = 0;
+    if (!*s)
+        return (1);
+    if (is_palindrome(s + 1) == 1 && s[i] == s[strlen(s) - i - 1])
+    {
+        i++;
+        return (1);
+    }
+    return (0);
 
 }
