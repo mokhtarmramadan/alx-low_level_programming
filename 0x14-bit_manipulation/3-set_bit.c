@@ -2,10 +2,16 @@
 
 /**
  * set_bit - function that sets the value of a bit to 1 at a given index
- * @n: 
+ * @n: the unsigned long int pointer
  * @index: index starting from 0
  * Return: return the index or -1 in an error
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
+	if (index > (sizeof(unsigned long int) * 8 - 1))
+	{
+		return (-1);
+	}
+	*n |= 1UL << index;
+	return (1);
 }
