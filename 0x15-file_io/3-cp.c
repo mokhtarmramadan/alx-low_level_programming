@@ -57,10 +57,10 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 
-	fd_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	fd_from = open(argv[1], O_RDONLY);
 	buffer = create_buffer(argv[1]);
 	bytes = read(fd_from, buffer, 1024);
+	fd_to = open(argv[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
 	if (fd_from == -1 || bytes == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
