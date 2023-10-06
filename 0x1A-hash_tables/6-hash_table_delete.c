@@ -21,6 +21,11 @@ void hash_table_delete(hash_table_t *ht)
 }
 
 
+/**
+ * free_list - frees a linked list
+ * @list: linked list pointer
+ * Returns: viod
+ */
 void free_list(hash_node_t *list)
 {
 	hash_node_t *temp;
